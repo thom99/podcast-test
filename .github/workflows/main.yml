@@ -1,5 +1,6 @@
 name: Generate Podcast Feeds
-on: [push]
+on: 
+  workflow_dispatch:
 jobs: 
   build:
     runs-on: ubuntu-latest
@@ -22,5 +23,6 @@ jobs:
           git config user.email github-actions@github.com
           git add .
           git commit -m "Modified Feed"
+          git push
           
        
